@@ -1,0 +1,11 @@
+..\obj\iap.o: ..\IAP\iap.c
+..\obj\iap.o: ..\SYSTEM\sys\sys.h
+..\obj\iap.o: ..\SYSTEM\sys\stm32f10x.h
+..\obj\iap.o: ..\SYSTEM\sys\core_cm3.h
+..\obj\iap.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\iap.o: ..\SYSTEM\sys\system_stm32f10x.h
+..\obj\iap.o: ..\SYSTEM\delay\delay.h
+..\obj\iap.o: ..\SYSTEM\usart\usart.h
+..\obj\iap.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\iap.o: ..\HARDWARE\STMFLASH\stmflash.h
+..\obj\iap.o: ..\IAP\iap.h
