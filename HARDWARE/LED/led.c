@@ -20,6 +20,11 @@ void LED_Init(void)
 	GPIOB->CRH&=0XF0FFFFFF;
 	GPIOB->CRH|=0X03000000;//推挽输出
 	GPIOB->ODR|=1<<14; // 输出高
+	
+	RCC->APB2ENR|=1<<4;						 
+	GPIOC->CRH&=0XFF0FFFFF;//PC13 推挽输出 
+	GPIOC->CRH|=0X00300000;	
+	GPIOC->ODR|=0<<13; // 输出低
 }
 
 

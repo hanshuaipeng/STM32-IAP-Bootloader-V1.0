@@ -124,6 +124,7 @@ int main(void)
 		if(t==10)
 		{
 			LED0=!LED0;
+			LED1=!LED1;
 			t=0;
 
 		}	  	 				   	 

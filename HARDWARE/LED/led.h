@@ -16,7 +16,7 @@
 
 //LED端口定义
 #define LED0 PBout(14)	// DS0
-
+#define LED1 PCout(13) 
 
 void LED_Init(void);	//初始化		 				    
 #endif
