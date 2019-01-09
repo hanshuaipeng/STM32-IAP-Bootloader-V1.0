@@ -7,7 +7,8 @@
 //////////////////////////////////////////////////////////////////////////////////	    
 
 iapfun jump2app; 
-u16 iapbuf[1024];   
+u16 iapbuf[1024]; 
+uint8_t Update_Error = 0;
 //appxaddr:应用程序的起始地址
 //appbuf:应用程序CODE.
 //appsize:应用程序大小(字节).

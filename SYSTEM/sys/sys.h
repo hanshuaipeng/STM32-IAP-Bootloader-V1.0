@@ -97,6 +97,7 @@
 #define RTIR   2  //上升沿触发
 								   
 extern uint8_t Rev_Finish;
+extern uint16_t Id_Crc;
 //IAP方式
 //1,CAN;0,UART
 #define IAP_STY  1

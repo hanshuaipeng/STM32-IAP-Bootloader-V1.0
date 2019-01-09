@@ -155,18 +155,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>244</LineNumber>
+          <LineNumber>249</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134221616</Address>
+          <Address>134221822</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\HARDWARE\CAN\can.c</Filename>
+          <Filename>E:\1HSP work\椤圭洰\浼犻€佸甫椹卞姩鏉?浠ｇ爜\IAP Bootloader V1.0\HARDWARE\CAN\can.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\test\../HARDWARE/CAN/can.c\244</Expression>
+          <Expression>\\test\../HARDWARE/CAN/can.c\249</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -209,6 +209,11 @@
           <count>7</count>
           <WinNumber>1</WinNumber>
           <ItemText>Crc_Out</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Num</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

@@ -207,7 +207,7 @@ void Flash_Read(void)
 	Local_ID = ID_Parameter[0];
 	if(Local_ID>255)
 	{
-		Local_ID=255;
+		Local_ID=Id_Crc;
 	}
 }
 

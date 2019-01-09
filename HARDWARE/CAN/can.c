@@ -4,8 +4,9 @@
 #include "usart.h"
 #include "sys.h"
 #include "crc16.h"
+#include "iap.h"
 uint32_t Local_ID = 0xff;
-
+uint8_t Dev_MSG = 0;
 //CAN1初始化
 //tsjw:重新同步跳跃时间单元.范围:1~3;
 //tbs2:时间段2的时间单元.范围:1~8;
@@ -221,19 +222,34 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 	uint16_t Pakg_ID = 0;
 	u8 ide,rtr,len; 
 	uint8_t i=0;
+	static uint16_t Num=0;
 	u8 temp_rxbuf[8];
  	CAN1_Rx_Msg(0,&id,&ide,&rtr,&len,temp_rxbuf);
-	if(id == 0x500||(id==(0x500|Local_ID)))
+	if(id == 0x500||(id==(0x50000|Local_ID)))
 	{
 		Pakg_ID = temp_rxbuf[0] + (temp_rxbuf[1]<<8);
 		if(Pakg_ID == 0)
 		{
+			Num++;
 			Pakg_Num = (temp_rxbuf[3]<<8) + temp_rxbuf[2];
 			Data_Len = (temp_rxbuf[5]<<8) + temp_rxbuf[4];
 			Crc_In = (temp_rxbuf[6])+(temp_rxbuf[7]<<8);
 		}
 		else
 		{
+			if(Pakg_ID==Num++)
+			{
+				printf("Pakg_ID=%d\r\n",Pakg_ID);
+				Update_Error = 0;
+			}
+			else
+			{
+				printf("error!!!\r\n");
+				Num=0;
+				Rev_Finish = 1;
+				Update_Error = 1;
+				return;
+			}
 			for(i=0;i<6;i++)
 			{
 				USART_RX_BUF[(Pakg_ID-1)*6+i]=temp_rxbuf[i+2];
@@ -241,16 +257,21 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 				if(USART_RX_CNT == Data_Len)
 				{
 					Rev_Finish = 1;
+					Num=0;
 					USART_RX_CNT = Data_Len;
 					break;
 				}
 			}
 		}
-	}		
+	}
+	if((id == 0x600)||(id == (0x60000|Local_ID)))//获取设备信息
+	{
+		Dev_MSG = 1;
+	}	
 }
 #endif
 
-//CAN1发送一组数据(固定格式:ID为0x600|Local_ID,标准帧,数据帧)	
+//CAN1发送一组数据(固定格式:ID为0x60000|Local_ID,扩展帧,数据帧)	
 //len:数据长度(最大为8)				     
 //msg:数据指针,最大为8个字节.
 //返回值:0,成功;
@@ -259,7 +280,7 @@ u8 CAN1_Send_Msg(u8* msg,u8 len)
 {	
 	u8 mbox;
 	u16 i=0;	  	 						       
-  mbox=CAN1_Tx_Msg(0x600|Local_ID,0,0,len,msg);   
+  mbox=CAN1_Tx_Msg(0x60000|Local_ID,1,0,len,msg);   
 	while((CAN1_Tx_Staus(mbox)!=0X07)&&(i<0XFFF))i++;//等待发送结束
 	if(i>=0XFFF)return 1;							//发送失败?
 	return 0;										//发送成功;
