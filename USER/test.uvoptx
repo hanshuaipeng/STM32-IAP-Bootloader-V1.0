@@ -118,7 +118,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>ST-LINKIII-KEIL_SWO</Key>
-          <Name>-U303030303030303030303031 -O8398 -S0 -C0 -A0 -N00("ARM CoreSight SW-DP") -D00(1BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC1000 -FN1 -FF0STM32F10x_512.FLM -FS08000000 -FL080000 -FP0($$Device:STM32F103RC$Flash\STM32F10x_512.FLM)</Name>
+          <Name>-U5&amp;15C311E1&amp;0&amp;8 -O8398 -S0 -C0 -A0 -N00("ARM CoreSight SW-DP") -D00(1BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC1000 -FN1 -FF0STM32F10x_512.FLM -FS08000000 -FL080000 -FP0($$Device:STM32F103RC$Flash\STM32F10x_512.FLM)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -157,7 +157,7 @@
           <Type>0</Type>
           <LineNumber>249</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134221822</Address>
+          <Address>134222062</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -167,6 +167,70 @@
           <Filename>E:\1HSP work\椤圭洰\浼犻€佸甫椹卞姩鏉?浠ｇ爜\IAP Bootloader V1.0\HARDWARE\CAN\can.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\test\../HARDWARE/CAN/can.c\249</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>284</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134219786</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\1HSP work\椤圭洰\浼犻€佸甫椹卞姩鏉?浠ｇ爜\IAP Bootloader V1.0\HARDWARE\CAN\can.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\test\../HARDWARE/CAN/can.c\284</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>208</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134220328</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\1HSP work\椤圭洰\浼犻€佸甫椹卞姩鏉?浠ｇ爜\IAP Bootloader V1.0\HARDWARE\STMFLASH\stmflash.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\test\../HARDWARE/STMFLASH/stmflash.c\208</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>210</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134220336</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\1HSP work\椤圭洰\浼犻€佸甫椹卞姩鏉?浠ｇ爜\IAP Bootloader V1.0\HARDWARE\STMFLASH\stmflash.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\test\../HARDWARE/STMFLASH/stmflash.c\210</Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>84</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134222680</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\1HSP work\椤圭洰\浼犻€佸甫椹卞姩鏉?浠ｇ爜\IAP Bootloader V1.0\USER\test.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\test\test.c\84</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -214,6 +278,11 @@
           <count>8</count>
           <WinNumber>1</WinNumber>
           <ItemText>Num</ItemText>
+        </Ww>
+        <Ww>
+          <count>9</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Local_ID</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

@@ -1,6 +1,6 @@
 Dependencies for Project 'test', Target 'Target 1': (DO NOT MODIFY !)
 F (.\startup_stm32f10x_hd.s)(0x54B0B2EE)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Target_1-Id:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-Id:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 523" --pd "STM32F10X_HD SETA 1"--list ..\obj\startup_stm32f10x_hd.lst --xref -o ..\obj\startup_stm32f10x_hd.o --depend ..\obj\startup_stm32f10x_hd.d)
-F (.\test.c)(0x5C356C31)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\CAN -I ..\HARDWARE\STMFLASH -I ..\USMART -I ..\IAP -I ..\HARDWARE\CRC16-I.\RTE\_Target_1-Id:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD-o ..\obj\test.o --omf_browse ..\obj\test.crf --depend ..\obj\test.d)
+F (.\test.c)(0x5C36EE55)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\LED -I ..\HARDWARE\KEY -I ..\HARDWARE\CAN -I ..\HARDWARE\STMFLASH -I ..\USMART -I ..\IAP -I ..\HARDWARE\CRC16-I.\RTE\_Target_1-Id:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD-o ..\obj\test.o --omf_browse ..\obj\test.crf --depend ..\obj\test.d)
 I (..\SYSTEM\sys\sys.h)(0x5C3560A3)
 I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
 I (..\SYSTEM\sys\core_cm3.h)(0x4D523B58)

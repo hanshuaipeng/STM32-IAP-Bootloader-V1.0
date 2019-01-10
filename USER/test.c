@@ -69,7 +69,7 @@ int main(void)
 	uint8_t dev_sta[4];
 	u8 t; 
 	u16 applenth=0;
-		
+	uint8_t key_num = 0;
 			//接收到的app代码长度
  	Stm32_Clock_Init(9);		//系统时钟设置
 	uart_init(72,115200);		//串口初始化为115200
@@ -81,9 +81,15 @@ int main(void)
 	CAN1_Mode_Init(1,2,3,12,0);      //=====CAN初始化	
 	Flash_Read();
 	delay_ms(500);
-	printf("用户程序接收完成!\r\n");
+	printf("SYSTEM RUN!\r\n");
 	while(1)
 	{
+		key_num = KEY_Scan(0);
+		if(key_num == 1)
+		{
+			Update_Flag = 0;
+			Flash_Write();
+		}
 		if(Update_Flag == 0)
 		{
 			printf("开始执行FLASH用户代码!!\r\n");
