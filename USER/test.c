@@ -171,12 +171,12 @@ int main(void)
 		}
 		if(Dev_MSG == 1)
 		{
-			Dev_MSG = 0;
 			dev_sta[0] = 0x01;//运行态
 			dev_sta[1] = Sys_Ver;//版本号
 			dev_sta[2] = Id_Crc;
 			dev_sta[3] = Id_Crc>>8;
-			CAN1_Send_Msg(dev_sta,4);//开机上传版本号与运行状态
+			if(CAN1_Send_Msg(dev_sta,4) == 0)//开机上传版本号与运行状态
+				Dev_MSG = 0;
 		}
 		t++;
 		delay_ms(10);
