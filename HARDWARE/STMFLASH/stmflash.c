@@ -220,6 +220,8 @@ void Flash_Write(void)
 {
 	Flash_Parameter[0]=ID_Parameter[0];	//写入数据
 	Flash_Parameter[1]=Update_Flag;
+	Flash_Parameter[2]=ID_Parameter[2];	//写入数据
+	Flash_Parameter[3]=ID_Parameter[3];	
 	STMFLASH_Write(FLASH_SAVE_ADDR,(u16*)Flash_Parameter,10);	
 }
 
