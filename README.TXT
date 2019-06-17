@@ -1,29 +1,30 @@
-´ËÎªstm32 IAPÐèÒªµÄBootLoader´úÂë
-ÊµÑéÆ÷²Ä:
+æ­¤ä¸ºstm32 IAPéœ€è¦çš„BootLoaderä»£ç 
+å®žéªŒå™¨æ:
 	STM32F103RCT6
 	
-ÊµÑéÄ¿µÄ:
-	ÀûÓÃCAN »òÕß´®¿Ú£¬½ÓÊÕÊý¾Ý£¬ÊµÏÖSTM32µÄIAP¹¦ÄÜ
+å®žéªŒç›®çš„:
+	åˆ©ç”¨CAN æˆ–è€…ä¸²å£ï¼ŒæŽ¥æ”¶æ•°æ®ï¼Œå®žçŽ°STM32çš„IAPåŠŸèƒ½
 
-µØÖ·ÅäÖÃ
-´Ó0x8000000-0x8009000£¬¹²36K¸øBootLoaderÔËÐÐ£¬appµØÖ·Æ«ÒÆ0x9000
+åœ°å€é…ç½®
+ä»Ž0x8000000-0x8009000ï¼Œå…±36Kç»™BootLoaderè¿è¡Œï¼Œappåœ°å€åç§»0x9000
 	       start              size
-app	£º0x8009000         0x37000   £¨0x40000-0x9000=0x37000£©
-iap 	£º0x8000000         0x40000
+app	ï¼š0x8009000         0x37000   ï¼ˆ0x40000-0x9000=0x37000ï¼‰
+iap 	ï¼š0x8000000         0x40000
+
+u8  USART_RX_BUF[USART_REC_LEN] __attribute__ ((at(0X20001000)));//æŽ¥æ”¶ç¼“å†²,æœ€å¤§USART_REC_LENä¸ªå­—èŠ‚,èµ·å§‹åœ°å€ä¸º0X20001000. 
 
 
-
-binÎÄ¼þÉú³É
+binæ–‡ä»¶ç”Ÿæˆ
 D:\Keil_v5\ARM\ARMCC\bin\fromelf.exe --bin -o ..\OBJ\Conveyor_Belt.bin ..\OBJ\Conveyor_Belt.axf
 
 
-app´úÂëÖÐÐè¸ü¸ÄÏòÁ¿±íµÄÆ«ÒÆÁ¿
+appä»£ç ä¸­éœ€æ›´æ”¹å‘é‡è¡¨çš„åç§»é‡
 MY_NVIC_SetVectorTable(0x08000000,0x9000);
 
 
-2019-01-09 	1£¬ÐÞ¸Ä²¿·ÖÄÚÈÝ
-		2£¬Ôö¼Ó°ü¶Ô±È£¬°ü´íÎóºóÖØÐÂ½ÓÊÜ
-¸ÐÐ»ÕýµãÔ­×ÓÌá¹©BootLoaderÔ´Âë
+2019-01-09 	1ï¼Œä¿®æ”¹éƒ¨åˆ†å†…å®¹
+		2ï¼Œå¢žåŠ åŒ…å¯¹æ¯”ï¼ŒåŒ…é”™è¯¯åŽé‡æ–°æŽ¥å—
+æ„Ÿè°¢æ­£ç‚¹åŽŸå­æä¾›BootLoaderæºç 
 
 
 
